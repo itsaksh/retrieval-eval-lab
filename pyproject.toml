@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "retrieval-eval-lab"
+version = "0.2.0"
+description = "Reproducible lexical, semantic and token-budget retrieval evaluation"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+semantic = ["numpy==2.3.5", "onnxruntime==1.23.2", "tokenizers==0.22.2"]
+
+[project.scripts]
+retrieval-eval = "retrieval_lab.__main__:main"
+retrieval-compare = "retrieval_lab.compare:main"
+
+[tool.setuptools.packages.find]
+include = ["retrieval_lab*"]

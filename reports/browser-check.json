@@ -1,0 +1,7 @@
+{
+  "browser": "Chromium/Chrome headless",
+  "states": 960,
+  "horizontalOverflow": false,
+  "mobileOverflow": false,
+  "javascriptErrors": []
+}

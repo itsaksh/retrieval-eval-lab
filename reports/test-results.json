@@ -1,0 +1,11 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows",
+  "tests_run": 35,
+  "passed": 35,
+  "failures": 0,
+  "errors": 0,
+  "skipped": [],
+  "real_model_integration_enabled": true,
+  "successful": true
+}

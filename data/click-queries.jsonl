@@ -1,0 +1,24 @@
+{"id":"c01","query":"Safely write a message to the terminal even if its characters are outside the console encoding.","relevant":["utils.echo"]}
+{"id":"c02","query":"Which helper gives me an OS-appropriate directory for storing application settings?","relevant":["utils.get_app_dir"]}
+{"id":"c03","query":"Display a filesystem path to a human without crashing on undecodable bytes.","relevant":["utils.format_filename"]}
+{"id":"c04","query":"Open '-' as standard input or output and support a file that is opened only when first needed.","relevant":["utils.open_file"]}
+{"id":"c05","query":"Ask for a yes-or-no answer and optionally abort when the user declines.","relevant":["termui.confirm"]}
+{"id":"c06","query":"Read a typed value interactively with a default and retry invalid input.","relevant":["termui.prompt"]}
+{"id":"c07","query":"Show long command output one screen at a time.","relevant":["termui.echo_via_pager"]}
+{"id":"c08","query":"Show how far a loop has progressed while iterating over its items.","relevant":["termui.progressbar"]}
+{"id":"c09","query":"Apply foreground colour and bold formatting to a terminal string.","relevant":["termui.style"]}
+{"id":"c10","query":"Remove ANSI escape formatting from previously coloured text.","relevant":["termui.unstyle"]}
+{"id":"c11","query":"Let the user change text using an external editor and return their changes.","relevant":["termui.edit"]}
+{"id":"c12","query":"Open a web address in the user's default browser from a command line program.","relevant":["termui.launch"]}
+{"id":"c13","query":"Read one keystroke without waiting for the user to press Enter.","relevant":["termui.getchar"]}
+{"id":"c14","query":"Wait for a key press before the command continues.","relevant":["termui.pause"]}
+{"id":"c15","query":"Execute a Click command in a test and inspect its exit code and captured output.","relevant":["testing.CliRunner.invoke"]}
+{"id":"c16","query":"Run a test inside a fresh working directory that is cleaned up afterwards.","relevant":["testing.CliRunner.isolated_filesystem"]}
+{"id":"c17","query":"Read the interleaved combination of normal and error output captured by a command test.","relevant":["testing.Result.output"]}
+{"id":"c18","query":"Inspect captured standard output and standard error separately as text after running a test.","relevant":["testing.Result.stdout","testing.Result.stderr"]}
+{"id":"c19","query":"Turn a Python callback into a command with an automatically derived name.","relevant":["decorators.command"]}
+{"id":"c20","query":"Attach a named command-line option to a function using a decorator.","relevant":["decorators.option"]}
+{"id":"c21","query":"Add a hidden password prompt that asks for the value twice.","relevant":["decorators.password_option"]}
+{"id":"c22","query":"Which built-in decorators add a help flag and a package version flag?","relevant":["decorators.help_option","decorators.version_option"]}
+{"id":"c23","query":"Compare the decorators that pass the current context and only its attached object to a callback.","relevant":["decorators.pass_context","decorators.pass_obj"]}
+{"id":"c24","query":"Print a coloured message with styling and terminal output handled in a single call.","relevant":["termui.secho"]}

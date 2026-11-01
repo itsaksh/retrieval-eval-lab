@@ -1,0 +1,4 @@
+# Direct inference dependencies; install in a project virtual environment.
+numpy==2.3.5
+onnxruntime==1.23.2
+tokenizers==0.22.2

@@ -1,0 +1,12 @@
+{"id":"mcp-tools","text":"MCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments."}
+{"id":"mcp-stdio","text":"MCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout."}
+{"id":"ast-functions","text":"Python ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions."}
+{"id":"ast-limits","text":"Static Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target."}
+{"id":"git-review","text":"GitHub pull requests support code review. A small bug fix should include a regression test and a clear explanation of changed behavior."}
+{"id":"rag-retrieval","text":"Retrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source."}
+{"id":"retrieval-metrics","text":"Recall measures the fraction of relevant documents retrieved. Reciprocal rank is one divided by the rank of the first relevant result."}
+{"id":"bm25","text":"BM25 is a lexical retrieval method using term frequency, inverse document frequency and document length normalization."}
+{"id":"context-budget","text":"A context budget limits source material sent to a model. Select useful excerpts and retain source identifiers. Character counts differ from tokenizer token counts."}
+{"id":"llm-local","text":"Local LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency."}
+{"id":"ci-tests","text":"Continuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging."}
+{"id":"security-network","text":"Wireshark helps inspect network packets. Network security experiments should use traffic and systems for which testing is permitted."}

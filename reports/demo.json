@@ -1,0 +1,845 @@
+{
+  "k": 3,
+  "context_budget_characters": 600,
+  "documents": 12,
+  "queries": 16,
+  "methods": {
+    "overlap": {
+      "mean_recall_at_k": 0.875,
+      "mrr_at_k": 0.875,
+      "hit_rate_at_k": 0.875,
+      "mean_packed_recall_at_k": 0.875,
+      "queries": [
+        {
+          "query_id": "q1",
+          "query": "MCP tools list call arguments",
+          "relevant_ids": [
+            "mcp-tools"
+          ],
+          "ranked_ids": [
+            "mcp-tools",
+            "ast-limits",
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-tools]\nMCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments.\n\n[ast-limits]\nStatic Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target.\n\n[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 407,
+            "selected_ids": [
+              "mcp-tools",
+              "ast-limits",
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q2",
+          "query": "stdio JSON RPC logs stderr",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 128,
+            "selected_ids": [
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q3",
+          "query": "Python function names source lines syntax trees",
+          "relevant_ids": [
+            "ast-functions"
+          ],
+          "ranked_ids": [
+            "ast-functions",
+            "ast-limits",
+            "context-budget"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ast-functions]\nPython ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions.\n\n[ast-limits]\nStatic Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target.\n\n[context-budget]\nA context budget limits source material sent to a model. Select useful excerpts and retain source identifiers. Character counts differ from tokenizer token counts.",
+            "characters": 476,
+            "selected_ids": [
+              "ast-functions",
+              "ast-limits",
+              "context-budget"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q4",
+          "query": "dynamic dispatch runtime call target",
+          "relevant_ids": [
+            "ast-limits"
+          ],
+          "ranked_ids": [
+            "ast-limits",
+            "mcp-tools"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ast-limits]\nStatic Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target.\n\n[mcp-tools]\nMCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments.",
+            "characters": 277,
+            "selected_ids": [
+              "ast-limits",
+              "mcp-tools"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q5",
+          "query": "GitHub review regression test bug fix",
+          "relevant_ids": [
+            "git-review"
+          ],
+          "ranked_ids": [
+            "git-review",
+            "ci-tests"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[git-review]\nGitHub pull requests support code review. A small bug fix should include a regression test and a clear explanation of changed behavior.\n\n[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.",
+            "characters": 303,
+            "selected_ids": [
+              "git-review",
+              "ci-tests"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q6",
+          "query": "retrieval supporting documents cite source",
+          "relevant_ids": [
+            "rag-retrieval"
+          ],
+          "ranked_ids": [
+            "rag-retrieval",
+            "ast-functions",
+            "bm25"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.\n\n[ast-functions]\nPython ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions.\n\n[bm25]\nBM25 is a lexical retrieval method using term frequency, inverse document frequency and document length normalization.",
+            "characters": 434,
+            "selected_ids": [
+              "rag-retrieval",
+              "ast-functions",
+              "bm25"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q7",
+          "query": "recall reciprocal rank relevant documents",
+          "relevant_ids": [
+            "retrieval-metrics"
+          ],
+          "ranked_ids": [
+            "retrieval-metrics",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[retrieval-metrics]\nRecall measures the fraction of relevant documents retrieved. Reciprocal rank is one divided by the rank of the first relevant result.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.",
+            "characters": 320,
+            "selected_ids": [
+              "retrieval-metrics",
+              "rag-retrieval"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q8",
+          "query": "term frequency document length lexical",
+          "relevant_ids": [
+            "bm25"
+          ],
+          "ranked_ids": [
+            "bm25",
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[bm25]\nBM25 is a lexical retrieval method using term frequency, inverse document frequency and document length normalization.\n\n[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 283,
+            "selected_ids": [
+              "bm25",
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q9",
+          "query": "context budget character tokenizer tokens",
+          "relevant_ids": [
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "context-budget",
+            "llm-local",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[context-budget]\nA context budget limits source material sent to a model. Select useful excerpts and retain source identifiers. Character counts differ from tokenizer token counts.\n\n[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.",
+            "characters": 504,
+            "selected_ids": [
+              "context-budget",
+              "llm-local",
+              "rag-retrieval"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q10",
+          "query": "local inference quantization memory latency",
+          "relevant_ids": [
+            "llm-local"
+          ],
+          "ranked_ids": [
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 156,
+            "selected_ids": [
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q11",
+          "query": "tests pushes pull requests integration",
+          "relevant_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "ranked_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.\n\n[git-review]\nGitHub pull requests support code review. A small bug fix should include a regression test and a clear explanation of changed behavior.",
+            "characters": 303,
+            "selected_ids": [
+              "ci-tests",
+              "git-review"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q12",
+          "query": "network packets Wireshark",
+          "relevant_ids": [
+            "security-network"
+          ],
+          "ranked_ids": [
+            "security-network"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[security-network]\nWireshark helps inspect network packets. Network security experiments should use traffic and systems for which testing is permitted.",
+            "characters": 151,
+            "selected_ids": [
+              "security-network"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q13",
+          "query": "logs warning stream",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 128,
+            "selected_ids": [
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q14",
+          "query": "language model source identifiers context",
+          "relevant_ids": [
+            "rag-retrieval",
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "context-budget",
+            "rag-retrieval",
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[context-budget]\nA context budget limits source material sent to a model. Select useful excerpts and retain source identifiers. Character counts differ from tokenizer token counts.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.\n\n[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 504,
+            "selected_ids": [
+              "context-budget",
+              "rag-retrieval",
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q15",
+          "query": "Where should diagnostic output be written",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "ci-tests",
+            "git-review",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "hit_at_k": 0.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.\n\n[git-review]\nGitHub pull requests support code review. A small bug fix should include a regression test and a clear explanation of changed behavior.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.",
+            "characters": 469,
+            "selected_ids": [
+              "ci-tests",
+              "git-review",
+              "rag-retrieval"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q16",
+          "query": "How do I keep the prompt within a size ceiling",
+          "relevant_ids": [
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "llm-local",
+            "mcp-tools",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "hit_at_k": 0.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.\n\n[mcp-tools]\nMCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.",
+            "characters": 448,
+            "selected_ids": [
+              "llm-local",
+              "mcp-tools",
+              "rag-retrieval"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        }
+      ]
+    },
+    "bm25": {
+      "mean_recall_at_k": 0.875,
+      "mrr_at_k": 0.875,
+      "hit_rate_at_k": 0.875,
+      "mean_packed_recall_at_k": 0.875,
+      "queries": [
+        {
+          "query_id": "q1",
+          "query": "MCP tools list call arguments",
+          "relevant_ids": [
+            "mcp-tools"
+          ],
+          "ranked_ids": [
+            "mcp-tools",
+            "ast-limits",
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-tools]\nMCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments.\n\n[ast-limits]\nStatic Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target.\n\n[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 407,
+            "selected_ids": [
+              "mcp-tools",
+              "ast-limits",
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q2",
+          "query": "stdio JSON RPC logs stderr",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 128,
+            "selected_ids": [
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q3",
+          "query": "Python function names source lines syntax trees",
+          "relevant_ids": [
+            "ast-functions"
+          ],
+          "ranked_ids": [
+            "ast-functions",
+            "context-budget",
+            "ast-limits"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ast-functions]\nPython ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions.\n\n[context-budget]\nA context budget limits source material sent to a model. Select useful excerpts and retain source identifiers. Character counts differ from tokenizer token counts.\n\n[ast-limits]\nStatic Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target.",
+            "characters": 476,
+            "selected_ids": [
+              "ast-functions",
+              "context-budget",
+              "ast-limits"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q4",
+          "query": "dynamic dispatch runtime call target",
+          "relevant_ids": [
+            "ast-limits"
+          ],
+          "ranked_ids": [
+            "ast-limits",
+            "mcp-tools"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ast-limits]\nStatic Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target.\n\n[mcp-tools]\nMCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments.",
+            "characters": 277,
+            "selected_ids": [
+              "ast-limits",
+              "mcp-tools"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q5",
+          "query": "GitHub review regression test bug fix",
+          "relevant_ids": [
+            "git-review"
+          ],
+          "ranked_ids": [
+            "git-review",
+            "ci-tests"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[git-review]\nGitHub pull requests support code review. A small bug fix should include a regression test and a clear explanation of changed behavior.\n\n[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.",
+            "characters": 303,
+            "selected_ids": [
+              "git-review",
+              "ci-tests"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q6",
+          "query": "retrieval supporting documents cite source",
+          "relevant_ids": [
+            "rag-retrieval"
+          ],
+          "ranked_ids": [
+            "rag-retrieval",
+            "ast-functions",
+            "bm25"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.\n\n[ast-functions]\nPython ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions.\n\n[bm25]\nBM25 is a lexical retrieval method using term frequency, inverse document frequency and document length normalization.",
+            "characters": 434,
+            "selected_ids": [
+              "rag-retrieval",
+              "ast-functions",
+              "bm25"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q7",
+          "query": "recall reciprocal rank relevant documents",
+          "relevant_ids": [
+            "retrieval-metrics"
+          ],
+          "ranked_ids": [
+            "retrieval-metrics",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[retrieval-metrics]\nRecall measures the fraction of relevant documents retrieved. Reciprocal rank is one divided by the rank of the first relevant result.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.",
+            "characters": 320,
+            "selected_ids": [
+              "retrieval-metrics",
+              "rag-retrieval"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q8",
+          "query": "term frequency document length lexical",
+          "relevant_ids": [
+            "bm25"
+          ],
+          "ranked_ids": [
+            "bm25",
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[bm25]\nBM25 is a lexical retrieval method using term frequency, inverse document frequency and document length normalization.\n\n[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 283,
+            "selected_ids": [
+              "bm25",
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q9",
+          "query": "context budget character tokenizer tokens",
+          "relevant_ids": [
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "context-budget",
+            "rag-retrieval",
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[context-budget]\nA context budget limits source material sent to a model. Select useful excerpts and retain source identifiers. Character counts differ from tokenizer token counts.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.\n\n[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 504,
+            "selected_ids": [
+              "context-budget",
+              "rag-retrieval",
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q10",
+          "query": "local inference quantization memory latency",
+          "relevant_ids": [
+            "llm-local"
+          ],
+          "ranked_ids": [
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 156,
+            "selected_ids": [
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q11",
+          "query": "tests pushes pull requests integration",
+          "relevant_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "ranked_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.\n\n[git-review]\nGitHub pull requests support code review. A small bug fix should include a regression test and a clear explanation of changed behavior.",
+            "characters": 303,
+            "selected_ids": [
+              "ci-tests",
+              "git-review"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q12",
+          "query": "network packets Wireshark",
+          "relevant_ids": [
+            "security-network"
+          ],
+          "ranked_ids": [
+            "security-network"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[security-network]\nWireshark helps inspect network packets. Network security experiments should use traffic and systems for which testing is permitted.",
+            "characters": 151,
+            "selected_ids": [
+              "security-network"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q13",
+          "query": "logs warning stream",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 128,
+            "selected_ids": [
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q14",
+          "query": "language model source identifiers context",
+          "relevant_ids": [
+            "rag-retrieval",
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "context-budget",
+            "rag-retrieval",
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[context-budget]\nA context budget limits source material sent to a model. Select useful excerpts and retain source identifiers. Character counts differ from tokenizer token counts.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.\n\n[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 504,
+            "selected_ids": [
+              "context-budget",
+              "rag-retrieval",
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q15",
+          "query": "Where should diagnostic output be written",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "security-network",
+            "rag-retrieval",
+            "ci-tests"
+          ],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "hit_at_k": 0.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[security-network]\nWireshark helps inspect network packets. Network security experiments should use traffic and systems for which testing is permitted.\n\n[rag-retrieval]\nRetrieval augmented generation retrieves supporting documents before a language model generates an answer. Context should cite the retrieved source.\n\n[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.",
+            "characters": 472,
+            "selected_ids": [
+              "security-network",
+              "rag-retrieval",
+              "ci-tests"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        },
+        {
+          "query_id": "q16",
+          "query": "How do I keep the prompt within a size ceiling",
+          "relevant_ids": [
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "llm-local",
+            "retrieval-metrics",
+            "mcp-tools"
+          ],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "hit_at_k": 0.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.\n\n[retrieval-metrics]\nRecall measures the fraction of relevant documents retrieved. Reciprocal rank is one divided by the rank of the first relevant result.\n\n[mcp-tools]\nMCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments.",
+            "characters": 438,
+            "selected_ids": [
+              "llm-local",
+              "retrieval-metrics",
+              "mcp-tools"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 600
+          }
+        }
+      ]
+    }
+  },
+  "scope": "Lexical retrieval evaluation; no generation or semantic embedding model is used.",
+  "inputs": {
+    "documents_sha256": "cd8db6b5f516828b10f8d65b0ef84d622fde5f2f5fc0807e4ea1e06367cb7cd4",
+    "queries_sha256": "f8e0fbd5a2ba9edadbeec44ad0f83ca68d30fea9e93b5ea5715e39198de9784a"
+  }
+}

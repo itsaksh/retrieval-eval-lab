@@ -1,0 +1,838 @@
+{
+  "k": 2,
+  "context_budget_characters": 160,
+  "documents": 12,
+  "queries": 16,
+  "methods": {
+    "overlap": {
+      "mean_recall_at_k": 0.875,
+      "mrr_at_k": 0.875,
+      "hit_rate_at_k": 0.875,
+      "mean_packed_recall_at_k": 0.65625,
+      "queries": [
+        {
+          "query_id": "q1",
+          "query": "MCP tools list call arguments",
+          "relevant_ids": [
+            "mcp-tools"
+          ],
+          "ranked_ids": [
+            "mcp-tools",
+            "ast-limits"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-tools]\nMCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments.",
+            "characters": 124,
+            "selected_ids": [
+              "mcp-tools"
+            ],
+            "skipped_ids": [
+              "ast-limits"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q2",
+          "query": "stdio JSON RPC logs stderr",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 128,
+            "selected_ids": [
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q3",
+          "query": "Python function names source lines syntax trees",
+          "relevant_ids": [
+            "ast-functions"
+          ],
+          "ranked_ids": [
+            "ast-functions",
+            "ast-limits"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ast-functions]\nPython ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions.",
+            "characters": 141,
+            "selected_ids": [
+              "ast-functions"
+            ],
+            "skipped_ids": [
+              "ast-limits"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q4",
+          "query": "dynamic dispatch runtime call target",
+          "relevant_ids": [
+            "ast-limits"
+          ],
+          "ranked_ids": [
+            "ast-limits",
+            "mcp-tools"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ast-limits]\nStatic Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target.",
+            "characters": 151,
+            "selected_ids": [
+              "ast-limits"
+            ],
+            "skipped_ids": [
+              "mcp-tools"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q5",
+          "query": "GitHub review regression test bug fix",
+          "relevant_ids": [
+            "git-review"
+          ],
+          "ranked_ids": [
+            "git-review",
+            "ci-tests"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[git-review]\nGitHub pull requests support code review. A small bug fix should include a regression test and a clear explanation of changed behavior.",
+            "characters": 148,
+            "selected_ids": [
+              "git-review"
+            ],
+            "skipped_ids": [
+              "ci-tests"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q6",
+          "query": "retrieval supporting documents cite source",
+          "relevant_ids": [
+            "rag-retrieval"
+          ],
+          "ranked_ids": [
+            "rag-retrieval",
+            "ast-functions"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[ast-functions]\nPython ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions.",
+            "characters": 141,
+            "selected_ids": [
+              "ast-functions"
+            ],
+            "skipped_ids": [
+              "rag-retrieval"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q7",
+          "query": "recall reciprocal rank relevant documents",
+          "relevant_ids": [
+            "retrieval-metrics"
+          ],
+          "ranked_ids": [
+            "retrieval-metrics",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[retrieval-metrics]\nRecall measures the fraction of relevant documents retrieved. Reciprocal rank is one divided by the rank of the first relevant result.",
+            "characters": 154,
+            "selected_ids": [
+              "retrieval-metrics"
+            ],
+            "skipped_ids": [
+              "rag-retrieval"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q8",
+          "query": "term frequency document length lexical",
+          "relevant_ids": [
+            "bm25"
+          ],
+          "ranked_ids": [
+            "bm25",
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[bm25]\nBM25 is a lexical retrieval method using term frequency, inverse document frequency and document length normalization.",
+            "characters": 125,
+            "selected_ids": [
+              "bm25"
+            ],
+            "skipped_ids": [
+              "llm-local"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q9",
+          "query": "context budget character tokenizer tokens",
+          "relevant_ids": [
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "context-budget",
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 156,
+            "selected_ids": [
+              "llm-local"
+            ],
+            "skipped_ids": [
+              "context-budget"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q10",
+          "query": "local inference quantization memory latency",
+          "relevant_ids": [
+            "llm-local"
+          ],
+          "ranked_ids": [
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 156,
+            "selected_ids": [
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q11",
+          "query": "tests pushes pull requests integration",
+          "relevant_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "ranked_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 0.5,
+          "context": {
+            "text": "[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.",
+            "characters": 153,
+            "selected_ids": [
+              "ci-tests"
+            ],
+            "skipped_ids": [
+              "git-review"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q12",
+          "query": "network packets Wireshark",
+          "relevant_ids": [
+            "security-network"
+          ],
+          "ranked_ids": [
+            "security-network"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[security-network]\nWireshark helps inspect network packets. Network security experiments should use traffic and systems for which testing is permitted.",
+            "characters": 151,
+            "selected_ids": [
+              "security-network"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q13",
+          "query": "logs warning stream",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 128,
+            "selected_ids": [
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q14",
+          "query": "language model source identifiers context",
+          "relevant_ids": [
+            "rag-retrieval",
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "context-budget",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "",
+            "characters": 0,
+            "selected_ids": [],
+            "skipped_ids": [
+              "context-budget",
+              "rag-retrieval"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q15",
+          "query": "Where should diagnostic output be written",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "hit_at_k": 0.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.",
+            "characters": 153,
+            "selected_ids": [
+              "ci-tests"
+            ],
+            "skipped_ids": [
+              "git-review"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q16",
+          "query": "How do I keep the prompt within a size ceiling",
+          "relevant_ids": [
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "llm-local",
+            "mcp-tools"
+          ],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "hit_at_k": 0.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 156,
+            "selected_ids": [
+              "llm-local"
+            ],
+            "skipped_ids": [
+              "mcp-tools"
+            ],
+            "budget_characters": 160
+          }
+        }
+      ]
+    },
+    "bm25": {
+      "mean_recall_at_k": 0.875,
+      "mrr_at_k": 0.875,
+      "hit_rate_at_k": 0.875,
+      "mean_packed_recall_at_k": 0.65625,
+      "queries": [
+        {
+          "query_id": "q1",
+          "query": "MCP tools list call arguments",
+          "relevant_ids": [
+            "mcp-tools"
+          ],
+          "ranked_ids": [
+            "mcp-tools",
+            "ast-limits"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-tools]\nMCP tool discovery uses tools/list. The client invokes a named tool through tools/call with validated arguments.",
+            "characters": 124,
+            "selected_ids": [
+              "mcp-tools"
+            ],
+            "skipped_ids": [
+              "ast-limits"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q2",
+          "query": "stdio JSON RPC logs stderr",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 128,
+            "selected_ids": [
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q3",
+          "query": "Python function names source lines syntax trees",
+          "relevant_ids": [
+            "ast-functions"
+          ],
+          "ranked_ids": [
+            "ast-functions",
+            "context-budget"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ast-functions]\nPython ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions.",
+            "characters": 141,
+            "selected_ids": [
+              "ast-functions"
+            ],
+            "skipped_ids": [
+              "context-budget"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q4",
+          "query": "dynamic dispatch runtime call target",
+          "relevant_ids": [
+            "ast-limits"
+          ],
+          "ranked_ids": [
+            "ast-limits",
+            "mcp-tools"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[ast-limits]\nStatic Python call analysis cannot always resolve dynamic dispatch or infer runtime types. A call spelling is not a proven runtime target.",
+            "characters": 151,
+            "selected_ids": [
+              "ast-limits"
+            ],
+            "skipped_ids": [
+              "mcp-tools"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q5",
+          "query": "GitHub review regression test bug fix",
+          "relevant_ids": [
+            "git-review"
+          ],
+          "ranked_ids": [
+            "git-review",
+            "ci-tests"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[git-review]\nGitHub pull requests support code review. A small bug fix should include a regression test and a clear explanation of changed behavior.",
+            "characters": 148,
+            "selected_ids": [
+              "git-review"
+            ],
+            "skipped_ids": [
+              "ci-tests"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q6",
+          "query": "retrieval supporting documents cite source",
+          "relevant_ids": [
+            "rag-retrieval"
+          ],
+          "ranked_ids": [
+            "rag-retrieval",
+            "ast-functions"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[ast-functions]\nPython ast parses source into syntax trees. FunctionDef and AsyncFunctionDef expose function names and source line positions.",
+            "characters": 141,
+            "selected_ids": [
+              "ast-functions"
+            ],
+            "skipped_ids": [
+              "rag-retrieval"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q7",
+          "query": "recall reciprocal rank relevant documents",
+          "relevant_ids": [
+            "retrieval-metrics"
+          ],
+          "ranked_ids": [
+            "retrieval-metrics",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[retrieval-metrics]\nRecall measures the fraction of relevant documents retrieved. Reciprocal rank is one divided by the rank of the first relevant result.",
+            "characters": 154,
+            "selected_ids": [
+              "retrieval-metrics"
+            ],
+            "skipped_ids": [
+              "rag-retrieval"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q8",
+          "query": "term frequency document length lexical",
+          "relevant_ids": [
+            "bm25"
+          ],
+          "ranked_ids": [
+            "bm25",
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[bm25]\nBM25 is a lexical retrieval method using term frequency, inverse document frequency and document length normalization.",
+            "characters": 125,
+            "selected_ids": [
+              "bm25"
+            ],
+            "skipped_ids": [
+              "llm-local"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q9",
+          "query": "context budget character tokenizer tokens",
+          "relevant_ids": [
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "context-budget",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "",
+            "characters": 0,
+            "selected_ids": [],
+            "skipped_ids": [
+              "context-budget",
+              "rag-retrieval"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q10",
+          "query": "local inference quantization memory latency",
+          "relevant_ids": [
+            "llm-local"
+          ],
+          "ranked_ids": [
+            "llm-local"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 156,
+            "selected_ids": [
+              "llm-local"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q11",
+          "query": "tests pushes pull requests integration",
+          "relevant_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "ranked_ids": [
+            "ci-tests",
+            "git-review"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 0.5,
+          "context": {
+            "text": "[ci-tests]\nContinuous integration runs automated tests on pushes and pull requests. A failing unit test should prevent an unverified change from merging.",
+            "characters": 153,
+            "selected_ids": [
+              "ci-tests"
+            ],
+            "skipped_ids": [
+              "git-review"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q12",
+          "query": "network packets Wireshark",
+          "relevant_ids": [
+            "security-network"
+          ],
+          "ranked_ids": [
+            "security-network"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[security-network]\nWireshark helps inspect network packets. Network security experiments should use traffic and systems for which testing is permitted.",
+            "characters": 151,
+            "selected_ids": [
+              "security-network"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q13",
+          "query": "logs warning stream",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "mcp-stdio"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 1.0,
+          "context": {
+            "text": "[mcp-stdio]\nMCP stdio transport exchanges newline-delimited JSON-RPC messages. Application logs go to stderr rather than stdout.",
+            "characters": 128,
+            "selected_ids": [
+              "mcp-stdio"
+            ],
+            "skipped_ids": [],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q14",
+          "query": "language model source identifiers context",
+          "relevant_ids": [
+            "rag-retrieval",
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "context-budget",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 1.0,
+          "reciprocal_rank_at_k": 1.0,
+          "hit_at_k": 1.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "",
+            "characters": 0,
+            "selected_ids": [],
+            "skipped_ids": [
+              "context-budget",
+              "rag-retrieval"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q15",
+          "query": "Where should diagnostic output be written",
+          "relevant_ids": [
+            "mcp-stdio"
+          ],
+          "ranked_ids": [
+            "security-network",
+            "rag-retrieval"
+          ],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "hit_at_k": 0.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[security-network]\nWireshark helps inspect network packets. Network security experiments should use traffic and systems for which testing is permitted.",
+            "characters": 151,
+            "selected_ids": [
+              "security-network"
+            ],
+            "skipped_ids": [
+              "rag-retrieval"
+            ],
+            "budget_characters": 160
+          }
+        },
+        {
+          "query_id": "q16",
+          "query": "How do I keep the prompt within a size ceiling",
+          "relevant_ids": [
+            "context-budget"
+          ],
+          "ranked_ids": [
+            "llm-local",
+            "retrieval-metrics"
+          ],
+          "recall_at_k": 0.0,
+          "reciprocal_rank_at_k": 0.0,
+          "hit_at_k": 0.0,
+          "packed_recall_at_k": 0.0,
+          "context": {
+            "text": "[llm-local]\nLocal LLM inference runs a language model on local hardware. Model size, quantization and context length affect memory use and response latency.",
+            "characters": 156,
+            "selected_ids": [
+              "llm-local"
+            ],
+            "skipped_ids": [
+              "retrieval-metrics"
+            ],
+            "budget_characters": 160
+          }
+        }
+      ]
+    }
+  },
+  "scope": "Lexical retrieval evaluation; no generation or semantic embedding model is used.",
+  "inputs": {
+    "documents_sha256": "cd8db6b5f516828b10f8d65b0ef84d622fde5f2f5fc0807e4ea1e06367cb7cd4",
+    "queries_sha256": "f8e0fbd5a2ba9edadbeec44ad0f83ca68d30fea9e93b5ea5715e39198de9784a"
+  }
+}

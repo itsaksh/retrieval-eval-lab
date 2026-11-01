@@ -1,0 +1,16 @@
+{"id":"q1","query":"MCP tools list call arguments","relevant":["mcp-tools"]}
+{"id":"q2","query":"stdio JSON RPC logs stderr","relevant":["mcp-stdio"]}
+{"id":"q3","query":"Python function names source lines syntax trees","relevant":["ast-functions"]}
+{"id":"q4","query":"dynamic dispatch runtime call target","relevant":["ast-limits"]}
+{"id":"q5","query":"GitHub review regression test bug fix","relevant":["git-review"]}
+{"id":"q6","query":"retrieval supporting documents cite source","relevant":["rag-retrieval"]}
+{"id":"q7","query":"recall reciprocal rank relevant documents","relevant":["retrieval-metrics"]}
+{"id":"q8","query":"term frequency document length lexical","relevant":["bm25"]}
+{"id":"q9","query":"context budget character tokenizer tokens","relevant":["context-budget"]}
+{"id":"q10","query":"local inference quantization memory latency","relevant":["llm-local"]}
+{"id":"q11","query":"tests pushes pull requests integration","relevant":["ci-tests","git-review"]}
+{"id":"q12","query":"network packets Wireshark","relevant":["security-network"]}
+{"id":"q13","query":"logs warning stream","relevant":["mcp-stdio"]}
+{"id":"q14","query":"language model source identifiers context","relevant":["rag-retrieval","context-budget"]}
+{"id":"q15","query":"Where should diagnostic output be written","relevant":["mcp-stdio"]}
+{"id":"q16","query":"How do I keep the prompt within a size ceiling","relevant":["context-budget"]}
