@@ -24,7 +24,7 @@ python -m retrieval_lab.compare --model-dir models/minilm
 
 The explicit model download is approximately 91 MB. Both public files are pinned to a revision and SHA-256 verified before use. Inference runs locally on CPU and never downloads files. No model repository Python code is executed. Model weights and installed dependencies are excluded from the project archive; the saved report is portable.
 
-Direct dependencies: NumPy 2.3.5, ONNX Runtime 1.23.2, Tokenizers 0.22.2. A wheel is included in `dist/`; use `pip install "dist/retrieval_eval_lab-0.2.0-py3-none-any.whl[semantic]"` as an alternative to installing the source.
+Direct dependencies: NumPy 2.3.5, ONNX Runtime 1.23.2, Tokenizers 0.22.2. A wheel is available in the [portfolio release](https://github.com/itsaksh/ai-engineering-portfolio/releases/tag/portfolio-2026-11-01); after downloading it, use `pip install "retrieval_eval_lab-0.2.0-py3-none-any.whl[semantic]"` as an alternative to installing the source. Source checkouts can build a wheel with `python -m pip wheel . --no-deps --wheel-dir dist`.
 
 ```sh
 python -m retrieval_lab.compare --model-dir models/minilm --k 5 --budgets 64 128 256 512 1024 --output reports/my-run.json

@@ -3,5 +3,5 @@
   "import_origin": "separately installed wheel, outside source directory",
   "installed_cli_json_identical_to_source_report": true,
   "installed_cli_html_identical_to_source_report": true,
-  "wheel_sha256": "15e2df548a50d2b93f1054eafd51b1d61f2fba0d31c94b58e4cd508624dea406"
+  "wheel_sha256": "c9f38783a24c8a7ee659754049a0a9e814834c2d9e65061f9e331750af36b21d"
 }
