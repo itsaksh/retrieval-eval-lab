@@ -1,6 +1,6 @@
 # Local validation — 1 November 2026
 
-Verified with Python 3.12.14 on Windows. This records local execution; hosted GitHub Actions has not run because publishing is deferred.
+Verified with Python 3.12.14 on Windows. The public [GitHub Actions run](https://github.com/itsaksh/retrieval-eval-lab/actions/runs/41320903660) also passed on Python 3.11, 3.12 and 3.13 on Linux. Hosted CI skips the four downloaded-model integration tests; all 35 ran locally with the pinned model.
 
 | Check | Result |
 | --- | --- |

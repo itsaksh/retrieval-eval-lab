@@ -1,3 +1,5 @@
 * text=auto eol=lf
 *.png binary
 *.whl binary
+reports/** linguist-generated
+data/** linguist-vendored

@@ -62,7 +62,7 @@ $env:RETRIEVAL_MODEL_DIR = (Resolve-Path models/minilm).Path
 python tools/run_validation.py
 ```
 
-Without `RETRIEVAL_MODEL_DIR`, four integration tests are skipped. With the downloaded model, the suite covers actual embeddings, Unicode token boundaries, model truncation and an end-to-end CLI run, alongside known metric values, label isolation, checksum failures, source provenance and safe HTML embedding. `reports/test-results.json` records the local result. GitHub Actions is configured for Python 3.11–3.13 but has not run remotely.
+Without `RETRIEVAL_MODEL_DIR`, four integration tests are skipped. With the downloaded model, the suite covers actual embeddings, Unicode token boundaries, model truncation and an end-to-end CLI run, alongside known metric values, label isolation, checksum failures, source provenance and safe HTML embedding. `reports/test-results.json` records the full local result. [GitHub Actions passed](https://github.com/itsaksh/retrieval-eval-lab/actions/runs/41320903660) on Python 3.11–3.13; its lighter CI suite skips the four downloaded-model tests.
 
 `tools/verify_evidence.py --model-dir models/minilm --click-checkout /path/to/click` independently recounts saved contexts and compares all source excerpts. Optional `node tools/browser_check.cjs` checks all 960 report states; it requires a separately installed Playwright package and Chromium browser. `CHROME_EXECUTABLE` can point to an installed Chrome, and `PLAYWRIGHT_MODULE` can point to an existing Playwright package. This check does not use a signed-in browser profile.
 
