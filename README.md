@@ -72,7 +72,7 @@ To recreate the corpus from an unchanged public checkout at commit `2247b35ea1c4
 python tools/build_click_dataset.py /path/to/click
 ```
 
-The extractor reads AST locations without importing Click. It selects prefixes of documented public functions/methods in four files, capped at 24 source lines and 1,400 characters. `data/click-manifest.json` records exact source and corpus hashes. The Click BSD-3-Clause notice is retained in `data/CLICK_LICENSE.txt`.
+The extractor reads committed Git blobs and AST locations without importing Click. Its output uses canonical LF bytes so Windows checkout conversion cannot change the corpus checksum. It selects prefixes of documented public functions/methods in four files, capped at 24 source lines and 1,400 characters. `data/click-manifest.json` records exact committed-source and corpus hashes. The Click BSD-3-Clause notice is retained in `data/CLICK_LICENSE.txt`.
 
 ## Reading the measurements
 

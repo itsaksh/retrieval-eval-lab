@@ -19,7 +19,9 @@ def build(checkout, output, git="git"):
         raise ValueError("dataset source files have local changes")
     records, sources = [], {}
     for relative in FILES:
-        raw = (checkout / relative).read_bytes()
+        # Read committed bytes rather than checkout bytes, which Git may convert
+        # to CRLF on Windows. Provenance hashes must match on every platform.
+        raw = subprocess.check_output([git, "-C", str(checkout), "show", f"{COMMIT}:{relative}"])
         sources[relative] = hashlib.sha256(raw).hexdigest()
         text = raw.decode("utf-8")
         lines = text.splitlines()
@@ -51,12 +53,13 @@ def build(checkout, output, git="git"):
         raise ValueError("duplicate symbol ids")
     output.mkdir(parents=True, exist_ok=True)
     data = output / "click-documents.jsonl"
-    data.write_text("".join(json.dumps(r, ensure_ascii=False)+"\n" for r in records), encoding="utf-8")
-    (output / "CLICK_LICENSE.txt").write_bytes((checkout / "LICENSE.txt").read_bytes())
+    data.write_text("".join(json.dumps(r, ensure_ascii=False)+"\n" for r in records), encoding="utf-8", newline="\n")
+    license_bytes = subprocess.check_output([git, "-C", str(checkout), "show", f"{COMMIT}:LICENSE.txt"])
+    (output / "CLICK_LICENSE.txt").write_bytes(license_bytes)
     manifest = {"repository": "https://github.com/pallets/click", "commit": COMMIT,
                 "source_files_sha256": sources, "documents_sha256": hashlib.sha256(data.read_bytes()).hexdigest(),
-                "chunks": len(records), "policy": "One prefix per documented public function/method; at most 24 source lines and 1400 characters; no generated summaries."}
-    (output / "click-manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8")
+                "chunks": len(records), "policy": "Committed Git blobs with LF output; one prefix per documented public function/method; at most 24 source lines and 1400 characters; no generated summaries."}
+    (output / "click-manifest.json").write_text(json.dumps(manifest, indent=2)+"\n", encoding="utf-8", newline="\n")
     print(json.dumps({"documents": len(records), "ids": ids}, indent=2))
 
 

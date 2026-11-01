@@ -2,12 +2,12 @@
   "repository": "https://github.com/pallets/click",
   "commit": "2247b35ea1c47c727d7a06e51fa280e12a863ff6",
   "source_files_sha256": {
-    "src/click/utils.py": "a3e076f638400b4fdaf0dfb1d25fc1de3e1f764abb3e6f97544b8bbe7874628a",
-    "src/click/termui.py": "ea6135c6f6cac99b99ef25c63577c33506f8ec669b7da8bf66b6bb385bd14622",
-    "src/click/testing.py": "217596e0e94e4d8e7e2ee0109379128e1aa0c5adc3efa035560b05cc34603f17",
-    "src/click/decorators.py": "2fa721588ecc4465da89ce00731f83f25e8ebc93d5daa68685ab4f0704258143"
+    "src/click/utils.py": "4720e22c292047ff1a747546b1ba80e96d1d8e8158e2e21ff01cdddb6498db17",
+    "src/click/termui.py": "16f6546b36d647d191788fc912e32d93e8b64289517f004e6d9604f4896ad1ca",
+    "src/click/testing.py": "76f4e649bc53000d667c8c0deff1591970fa034b0f085a207165839b2301019a",
+    "src/click/decorators.py": "16069357615691fcdfc9c794bb515f6009eb35aad6f7a76c017bdce06dae8d55"
   },
-  "documents_sha256": "7be9e3380574ca5d6a8ef6be3685f6eac3c8b74ca9f3f3922fdb4cc04ee98a9b",
+  "documents_sha256": "66429ef6d44e4e95777d78df7a477fc2cce801272971b729f637e63dbbc2d858",
   "chunks": 39,
-  "policy": "One prefix per documented public function/method; at most 24 source lines and 1400 characters; no generated summaries."
+  "policy": "Committed Git blobs with LF output; one prefix per documented public function/method; at most 24 source lines and 1400 characters; no generated summaries."
 }

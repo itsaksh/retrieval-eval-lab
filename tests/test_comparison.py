@@ -144,6 +144,7 @@ class ComparisonTests(unittest.TestCase):
         data = ROOT / "data/click-documents.jsonl"
         manifest = json.loads((ROOT/"data/click-manifest.json").read_text())
         self.assertEqual(hashlib.sha256(data.read_bytes()).hexdigest(), manifest["documents_sha256"])
+        self.assertNotIn(b"\r\n", data.read_bytes(), "corpus must use canonical LF bytes on all platforms")
         docs = [json.loads(line) for line in data.read_text(encoding="utf-8").splitlines()]
         self.assertEqual(len(docs), 39)
         for doc in docs:

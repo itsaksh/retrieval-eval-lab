@@ -34,5 +34,6 @@ These describe the included authored labels only. Higher dense recall did not yi
 - Tests caught an extractor boundary that ended on a blank source line. The extractor now removes trailing blank lines and preserves the exact inclusive line citation; source comparisons pass.
 - Browser checks caught overflow in a narrow viewport. Responsive controls were adjusted and both viewport checks now pass.
 - The installed-package comparison caught tiny BM25 floating-point differences across hash seeds. Query terms are now summed in sorted order, with a cross-process regression test; installed and source-generated reports match exactly on this machine.
+- The first GitHub run exposed Windows-to-Linux newline normalization in the corpus checksum. The extractor now reads committed Git blobs and writes canonical LF bytes; the provenance test also asserts LF-only corpus storage.
 
 Model revision and file checksums, input SHA-256 hashes, fixed ranking settings, encoder truncations, per-query rankings and exact context text are in `reports/click-comparison.json`. Model weights and dependencies are not packaged in the source archive. The implementation and demo were created with AI assistance; no production deployment, users, GitHub publication or internship selection is claimed.
